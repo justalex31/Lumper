@@ -23,6 +23,7 @@ using Lumper.Models;
 using Lumper.Helpers;
 using Microsoft.AspNetCore.Identity;
 using Lumper.Auth;
+using Lumper.DAL;
 
 namespace Lumper
 {
@@ -115,6 +116,8 @@ namespace Lumper
             builder.AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddTransient<UnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

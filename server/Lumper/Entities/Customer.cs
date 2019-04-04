@@ -1,10 +1,10 @@
 ﻿using Lumper.Data;
+using Lumper.Entities.Base;
 
 namespace Lumper.Entities
 {
-    public class Customer
+    public class Customer : BaseEntity
     {
-        public int Id { get; set; }
         public string IdentityId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
